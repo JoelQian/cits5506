@@ -2,8 +2,8 @@ from flask_login import login_required
 from app import app
 from flask import jsonify, make_response
 from app.models import Residence
-#from PiLocker_Fake import getUID # TODO: change this to the following line when running on the Raspberry Pi
-from PiLocker import getUID
+from PiLocker import getUID # TODO: change this to the following line when running on the Raspberry Pi
+# from PiLocker import getUID
 
 @login_required
 @app.route('/residences/<int:residence_id>', methods=['GET'])
